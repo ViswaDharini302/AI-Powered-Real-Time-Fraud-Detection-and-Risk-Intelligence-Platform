@@ -5,13 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Combines the rule engine score + the ML probability into ONE final
- * risk score from 0-100, and assigns a risk level.
- *
- * Final score = 50% rule score + 50% ML probability(as a percentage)
- * Feel free to tune these weights.
- */
 @Service
 public class RiskScoreService {
 
