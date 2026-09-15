@@ -1,0 +1,57 @@
+# ===== Java / Maven (backend) =====
+backend/target/
+*.class
+*.jar
+*.war
+!.mvn/wrapper/maven-wrapper.jar
+
+# ===== Python (ml-service) =====
+ml_services/venv/
+ml_services/.venv/
+ml_services/__pycache__/
+*.pyc
+*.pyo
+
+# Trained model files - large/regenerable
+ml_services/model.pkl
+ml_services/preprocessing.pkl
+
+# Local/private transaction data
+ml_services/transactions.csv
+
+# ===== Node / React (frontend) =====
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# ===== Secrets - NEVER commit these =====
+.env
+.env.*
+!.env.example
+
+application-secrets.properties
+application-local.properties
+
+*.pem
+*.key
+
+# ===== Databases / local data =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== Logs =====
+*.log
+
+# ===== OS / editor junk =====
+.DS_Store
+.idea/
+.vscode/
+*.iml
+Thumbs.db
