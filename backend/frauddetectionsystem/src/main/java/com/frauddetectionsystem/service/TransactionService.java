@@ -27,12 +27,6 @@ public class TransactionService {
     private final FraudDetectionService fraudDetectionService;
     private final MlClientService mlClientService;
     private final RiskScoreService riskScoreService;
-
-    /**
-     * This is Step 3-11 of the workflow diagram, all in one place:
-     * validate -> pull user history -> run rules -> call ML -> combine ->
-     * classify -> save -> create alert if needed.
-     */
     public RiskResponse processTransaction(String userEmail, TransactionRequest request) {
         User user = userRepository.findByEmail(userEmail)
                 .orElseThrow(() -> new IllegalArgumentException("User not found"));
