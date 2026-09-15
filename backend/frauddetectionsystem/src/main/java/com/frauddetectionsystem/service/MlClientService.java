@@ -5,12 +5,6 @@ import com.frauddetectionsystem.dto.MlPredictionResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-
-/**
- * Talks to the separate Python ML microservice (Flask/FastAPI + Scikit-learn).
- * Spring Boot never trains or runs the model itself - it just sends features
- * and receives a fraud probability back over REST.
- */
 @Service
 public class MlClientService {
 
